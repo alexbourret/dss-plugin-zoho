@@ -1,0 +1,26 @@
+{
+    "meta" : {
+        "label": "Zoho Single Sign On",
+        "description": "",
+        "icon": "fas fa-puzzle-piece"
+    },
+    "defaultDefinableInline": false,
+    "defaultDefinableAtProjectLevel": false,
+    "pluginParams": [
+    ],
+
+    "params": [
+        {
+            "name": "zoho_oauth",
+            "type": "CREDENTIAL_REQUEST",
+            "label": "Zoho Single Sign On",
+            "credentialRequestSettings": {
+                "type": "OAUTH2",
+                "authorizationEndpoint": "https://accounts.zoho.com/oauth/v2/auth",
+                "tokenEndpoint": "https://accounts.zoho.com/oauth/v2/token",
+                "scope": "offline_access WorkDrive.users.READ WorkDrive.files.CREATE WorkDrive.files.READ ZohoFiles.files.READ ZohoFiles.files.CREATE ZohoFiles.files.UPDATE WorkDrive.files.UPDATE WorkDrive.files.DELETE WorkDrive.teamfolders.READ ZohoCRM.users.ALL ZohoCRM.apis.READ ZohoCRM.modules.all"
+            },
+            "mandatory": true
+        }
+    ]
+}
