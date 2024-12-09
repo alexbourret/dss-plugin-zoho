@@ -1,0 +1,35 @@
+{
+    "meta" : {
+        "label": "WorkDrive",
+        "description": "Access your files stored on Zoho WorkDrive",
+        "icon": "fas fa-folder"
+    },
+    "params": [
+        {
+            "name": "auth_type",
+            "label": "Authentication type",
+            "type": "SELECT",
+            "description": "",
+            "selectChoices": [
+                {
+                    "value": "sso",
+                    "label": "Single Sign On"
+                }
+            ],
+            "defaultChoice": "sso",
+            "mandatory": true
+        },
+        {
+            "name": "zoho_oauth",
+            "label": "Zoho preset",
+            "type": "PRESET",
+            "parameterSetId": "sso",
+            "visibilityCondition": "model.auth_type == 'sso'"
+        },
+        {
+            "name": "folder_id",
+            "label": "Folder ID",
+            "type": "STRING"
+        }
+    ]
+}
